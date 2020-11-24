@@ -1,14 +1,11 @@
 const rollDice = function(number) {
   let rollArray = [];
+  // while (rollArray.length < number)
   for (let i = 0; i < number; i++) {
-    if (i < number - 1) {
-      rollArray += Math.ceil(Math.random() * Math.floor(6)) + ", ";
-    } else {
-      rollArray += Math.ceil(Math.random() * Math.floor(6))
-    }
-    
+    const randomRoll = Math.ceil(Math.random() * 6)
+    rollArray.push(randomRoll)
   }
-  return `Rolled ${number} dice: ${rollArray}`
+  return `Rolled ${number} dice: ${rollArray.join(", ")}`
 }
 
 const diceNumber = process.argv.splice(2)
