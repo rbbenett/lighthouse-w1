@@ -6,8 +6,7 @@ const findWaldo = function(names, found) {
   });
 };
 
-const actionWhenFound = function(index) {
-  console.log(`Found Waldo at index ${index}!`);
-};
+findWaldo(["Alice", "Bob", "Waldo", "Winston"], function(index) {
+  console.log("Waldo is located at:", index);
+});
 
-findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
